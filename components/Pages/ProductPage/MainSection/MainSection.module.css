@@ -1,0 +1,10 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category_name {
+  text-transform: capitalize;
+  margin: 0;
+}

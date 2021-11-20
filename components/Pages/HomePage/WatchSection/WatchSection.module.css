@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.header {
+  padding: 1.5rem 3rem 1rem;
+  font-size: 1.7rem;
+  text-align: right;
+}
+
+.banner1,
+.banner2 {
+  position: relative;
+  width: 49%;
+  color: white;
+  font-size: 30px;
+}
+
+.banner1 img,
+.banner2 img {
+  width: 100%;
+}
+
+.banner1 p {
+  margin: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 7%;
+}
+
+.banner2 p {
+  margin: 0;
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+}
+
+/* .banner1 h2, .banner2 h2{
+    co
+} */

@@ -1,0 +1,33 @@
+.container {
+  flex-basis: 33%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  transition: 0.3s ease-in-out;
+}
+
+.img_container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.img_container img {
+  width: 100%;
+}
+
+.product_info {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.product_title {
+  flex-basis: 72%;
+}

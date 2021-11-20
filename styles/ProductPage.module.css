@@ -1,0 +1,9 @@
+.sideBar {
+  flex-basis: 20%;
+}
+
+.product_page_container {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+}

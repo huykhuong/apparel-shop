@@ -1,0 +1,31 @@
+.wrapper {
+  margin-top: 10rem;
+  display: flex;
+  height: auto;
+}
+
+.area {
+  flex-basis: 50%;
+}
+
+.product_detail_area {
+  background-color: #f0f2f9;
+}
+
+.product_image_area {
+  text-align: center;
+}
+
+.product_image {
+  margin: auto;
+  width: 53%;
+}
+
+.product_image img {
+  width: 100%;
+}
+
+.product_sub_images img {
+  margin-right: 5px;
+  width: 30%;
+}

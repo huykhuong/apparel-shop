@@ -1,0 +1,52 @@
+.container {
+  padding: 0 1.1rem 0 3rem;
+}
+
+.header {
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 4rem;
+  opacity: 0.4;
+}
+
+.accordion {
+  margin-bottom: 3rem;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show {
+  height: 100px;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.link {
+  list-style: none;
+  opacity: 0.4;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sub_category_list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 0 0 1rem;
+  margin: 0;
+}
+
+.selected {
+  opacity: 0.9;
+}
