@@ -1,7 +1,13 @@
 .container {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
   height: auto;
+}
+
+@media (max-width: 550px) {
+  .container {
+    justify-content: flex-start;
+  }
 }

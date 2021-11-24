@@ -5,19 +5,21 @@ import SideBar from "../../../../../components/Pages/ProductPage/SideBar/SideBar
 import MainSection from "../../../../../components/Pages/ProductPage/MainSection/MainSection";
 
 const ProductPage = (props) => {
-  const transformedQuery = props.collection.section.replace("-", " ");
+  const transformedString = props.collection.section.replace("-", " ");
 
   return (
     <React.Fragment>
       <div className={classes.container}>
-        <div className={styles.sideBar}>
-          <SideBar
-            gender="Women"
-            sidebarCategories={props.collection.sidebarCategories}
-          />
-        </div>
-        <div className={styles.product_page_container}>
-          <MainSection category={transformedQuery} />
+        <div className={styles.wrapper}>
+          <div className={styles.sideBar}>
+            <SideBar
+              gender="Women"
+              sidebarCategories={props.collection.sidebarCategories}
+            />
+          </div>
+          <div className={styles.product_page_container}>
+            <MainSection category={transformedString} />
+          </div>
         </div>
       </div>
     </React.Fragment>

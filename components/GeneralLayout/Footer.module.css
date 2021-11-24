@@ -28,3 +28,24 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 550px) {
+  .footer_container {
+    margin: 7rem 0 3rem;
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-basis: 15rem;
+    align-items: center;
+  }
+
+  .brand {
+    font-size: 1.6rem;
+  }
+
+  #copyright {
+    width: auto;
+    justify-content: center;
+  }
+}

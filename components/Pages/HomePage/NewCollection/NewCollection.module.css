@@ -9,7 +9,6 @@
 
 .newCollection .title {
   font-family: "Elsie", cursive;
-  font-size: 6rem;
   width: 0;
   margin: 0;
   font-size: 5rem;
@@ -37,4 +36,28 @@
 .newCollection .anchor:hover {
   transition: 0.3s ease-out;
   transform: translateY(-0.6rem);
+}
+
+@media (max-width: 550px) {
+  .newCollection {
+    background: url("https://www.thestatesman.com/wp-content/uploads/2021/01/QT-Winter-fashion.jpg")
+      bottom 90% left 60% / cover no-repeat border-box;
+    height: 60vh;
+  }
+
+  .newCollection .title {
+    font-size: 3rem;
+    bottom: 10rem;
+    left: 2.5rem;
+  }
+
+  .newCollection .anchor {
+    bottom: 5rem;
+    left: 2.5rem;
+    letter-spacing: 6px;
+  }
+
+  .newCollection .anchor::after {
+    content: none;
+  }
 }

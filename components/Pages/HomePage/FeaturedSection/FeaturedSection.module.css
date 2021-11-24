@@ -2,3 +2,37 @@
   padding: 1.5rem 3rem 1rem;
   font-size: 1.7rem;
 }
+
+.view_more_button {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 6rem;
+  background: white;
+  border: 2px solid black;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font: inherit;
+  font-weight: bold;
+}
+
+.view_more_button:hover {
+  background: black;
+  color: white;
+}
+
+.hide_btn {
+  visibility: hidden;
+}
+
+@media (max-width: 550px) {
+  .header {
+    text-align: center;
+  }
+
+  .view_more_button {
+    padding: 0.5rem 1.5rem;
+    cursor: none;
+  }
+}

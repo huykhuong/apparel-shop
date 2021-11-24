@@ -83,7 +83,7 @@ const SideBar = (props) => {
           ))}
         </div>
 
-        <h2>Filter</h2>
+        <h3>Filter</h3>
       </div>
     </React.Fragment>
   );

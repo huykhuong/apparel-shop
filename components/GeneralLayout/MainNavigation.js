@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import classes from "./MainNavigation.module.css";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
 
 export default function MainNavigation(props) {
   const dispatch = useDispatch();
   const router = useRouter();
 
+  const [isBump, setIsBump] = useState(false);
+
   const [navBar, setNavBar] = useState(false);
   const [isHomePage, setIsHomePage] = useState(false);
+
+  //useSelector for cart items state
+  const cartItemsState = useSelector((state) => state.cartReducer.items);
 
   const toggleOpenCart = () => {
     dispatch(uiActions.toggleOpenCart());
@@ -27,6 +32,21 @@ export default function MainNavigation(props) {
     }
   }, [router.pathname]);
 
+  useEffect(() => {
+    if (cartItemsState.length === 0) {
+      return;
+    }
+    setIsBump(true);
+
+    const timer = setTimeout(() => {
+      setIsBump(false);
+    }, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [cartItemsState]);
+
   const changeNavBarAppearance = () => {
     if (window.scrollY >= 100) {
       setNavBar(true);
@@ -38,6 +58,8 @@ export default function MainNavigation(props) {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", changeNavBarAppearance);
   }
+
+  const bumpEffect = `${classes.cart_wrapper} ${isBump ? classes.bump : ""}`;
 
   return (
     <React.Fragment>
@@ -79,14 +101,26 @@ export default function MainNavigation(props) {
                 </div>
               </div>
             </li>
-            <li onClick={toggleOpenCart}>
+            <li className={bumpEffect} onClick={toggleOpenCart}>
               <BsCart fontSize="1.5em" />
+              {cartItemsState.length > 0 && (
+                <div
+                  className={
+                    isHomePage || navBar
+                      ? classes.cart_indicator
+                      : `${classes.cart_indicator} ${classes.black_background}`
+                  }
+                ></div>
+              )}
             </li>
             <li>
               <BiUser fontSize="1.5em" />
             </li>
           </ul>
         </nav>
+        {/* <div className={classes.mobile_nav_button}>
+          <AiOutlineMenu fontSize="1.6em" />
+        </div> */}
       </header>
     </React.Fragment>
   );

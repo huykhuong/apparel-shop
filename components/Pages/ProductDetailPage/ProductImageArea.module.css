@@ -1,0 +1,24 @@
+.product_image_area {
+  flex-basis: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.product_image {
+  margin: auto;
+  width: 58%;
+}
+
+.product_image img {
+  width: 100%;
+}
+
+.product_sub_images {
+  margin-top: 1rem;
+}
+
+.product_sub_images img {
+  margin-right: 5px;
+  width: 24%;
+}
