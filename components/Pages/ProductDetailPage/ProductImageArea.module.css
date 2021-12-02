@@ -22,3 +22,17 @@
   margin-right: 5px;
   width: 24%;
 }
+
+@media (max-width: 550px) {
+  .product_image {
+    width: 90%;
+  }
+
+  .product_image img {
+    width: 100%;
+  }
+
+  .product_sub_images img {
+    width: 30%;
+  }
+}

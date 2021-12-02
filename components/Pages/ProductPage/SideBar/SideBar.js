@@ -83,7 +83,7 @@ const SideBar = (props) => {
           ))}
         </div>
 
-        <h3>Filter</h3>
+        <h3 className={classes.filter_title}>Filter</h3>
       </div>
     </React.Fragment>
   );

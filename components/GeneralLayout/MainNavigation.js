@@ -24,6 +24,10 @@ export default function MainNavigation(props) {
     dispatch(uiActions.toggleOpenCart());
   };
 
+  const toggleOpenMobileSearchBar = () => {
+    dispatch(uiActions.toggleOpenMobileSearchBar());
+  };
+
   useEffect(() => {
     if (router.pathname === "/") {
       setIsHomePage(true);
@@ -88,7 +92,10 @@ export default function MainNavigation(props) {
           }
         >
           <ul className={classes.icons_list}>
-            <li className={classes.search_wrapper}>
+            <li
+              className={classes.search_wrapper}
+              onClick={toggleOpenMobileSearchBar}
+            >
               <div className={classes.search}>
                 <input
                   type="text"

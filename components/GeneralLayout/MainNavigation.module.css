@@ -160,4 +160,9 @@
   .search_input {
     display: none;
   }
+
+  .cart_indicator {
+    top: 0;
+    left: 15px;
+  }
 }

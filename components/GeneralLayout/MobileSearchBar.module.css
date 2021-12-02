@@ -1,0 +1,38 @@
+.overall_wrapper {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .overall_wrapper {
+    display: flex;
+  }
+  .search_wrapper {
+    transition: 0.5s ease-in-out;
+    transform: translateY(0);
+    height: 7vh;
+    width: 100%;
+    background-color: white;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+    animation: slide_in_mobile_search_bar 100ms ease-out;
+  }
+
+  .search_bar {
+    height: 60%;
+    border: none;
+    outline: none;
+    cursor: none;
+  }
+}
+
+@keyframes slide_in_mobile_search_bar {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

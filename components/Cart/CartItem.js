@@ -40,8 +40,8 @@ const CartItem = (props) => {
         <img className={classes.img} src={props.image} alt="product_image" />
       </div>
       <div className={classes.summary}>
-        <h3>{props.name}</h3>
-        <p>{props.size}</p>
+        <h3 className={classes.product_name}>{props.name}</h3>
+        <p className={classes.product_size}>{props.size}</p>
       </div>
       <div className={classes.actions}>
         <button onClick={decreaseAmount} className={classes.minus}>

@@ -40,6 +40,10 @@
     align-items: center;
   }
 
+  .footer:first-of-type {
+    flex-basis: 9rem;
+  }
+
   .brand {
     font-size: 1.6rem;
   }

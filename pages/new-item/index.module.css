@@ -1,0 +1,12 @@
+.add_new_item_form {
+  display: grid;
+  width: 30%;
+  margin: 10rem auto 0;
+  grid-template-columns: 10rem auto;
+  grid-row-gap: 2rem;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
+}

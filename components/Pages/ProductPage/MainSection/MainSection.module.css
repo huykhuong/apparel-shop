@@ -8,3 +8,13 @@
   text-transform: capitalize;
   margin: 0;
 }
+
+@media (max-width: 550px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .category_name {
+    margin-bottom: 30px;
+  }
+}

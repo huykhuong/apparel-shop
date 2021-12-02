@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialSliceState = {
   toggleOpenCart: false,
+  toggleOpenMobileSearchBar: false,
 };
 
 const uiSlice = createSlice({
@@ -10,6 +11,9 @@ const uiSlice = createSlice({
   reducers: {
     toggleOpenCart(state) {
       state.toggleOpenCart = !state.toggleOpenCart;
+    },
+    toggleOpenMobileSearchBar(state) {
+      state.toggleOpenMobileSearchBar = !state.toggleOpenMobileSearchBar;
     },
   },
 });

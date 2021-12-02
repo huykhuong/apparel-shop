@@ -17,10 +17,6 @@
   align-items: center;
 }
 
-/* .review_point {
-  font-weight: ;
-} */
-
 .total_review {
   opacity: 0.7;
 }
@@ -36,7 +32,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  width: 50%;
+  width: auto;
   justify-content: space-evenly;
 }
 
@@ -104,4 +100,30 @@
 
 .warning_visible {
   visibility: visible;
+}
+
+@media (max-width: 550px) {
+  .category {
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  .size_list {
+    width: 75%;
+    height: 90px;
+  }
+
+  .size_list .size_element {
+    cursor: none;
+  }
+
+  .actions_btn {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+  }
+
+  .add_to_cart_btn {
+    width: 60%;
+  }
 }

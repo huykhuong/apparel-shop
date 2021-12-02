@@ -50,3 +50,19 @@
 .selected {
   opacity: 0.9;
 }
+
+@media (max-width: 550px) {
+  .container {
+    padding: 0;
+    display: flex;
+  }
+  .container h3 {
+    margin-top: 0;
+  }
+  .accordion {
+    display: none;
+  }
+  .filter_title {
+    display: none;
+  }
+}

@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../../store/cart-slice";
 
 const ProductDetailArea = (props) => {
-  const temp_size_array = ["XS", "S", "M", "L"];
   const [amountCounter, setAmountCounter] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
   const [warningState, setWarningState] = useState(false);
@@ -57,19 +56,16 @@ const ProductDetailArea = (props) => {
   return (
     <React.Fragment>
       <div className={styles.product_detail_area}>
-        <p className={styles.category}>Dresses</p>
-        <h1 className={styles.product_name}>Drop type cushion chair</h1>
+        <p className={styles.category}>{props.category}</p>
+        <h1 className={styles.product_name}>{props.name}</h1>
         <div className={styles.review}>
           <AiFillStar /> &nbsp;
           <span className={styles.review_point}>8/10</span> <BsDot />{" "}
           <span className={styles.total_review}>15 Reviews</span>
         </div>
-        <p className={styles.description}>
-          Premium & comfortable memory foam with a strong structure built with
-          teakwood, it feels amazing
-        </p>
+        <p className={styles.description}>{props.description}</p>
         <ul className={styles.size_list}>
-          {temp_size_array.map((size) => (
+          {props.sizes.map((size) => (
             <li
               className={
                 selectedSize === size
@@ -92,7 +88,7 @@ const ProductDetailArea = (props) => {
           </p>
         </ul>
 
-        <h3>$265.50</h3>
+        <h3>${props.price}</h3>
         <div className={styles.actions_btn}>
           <button onClick={decreaseAmount} className={styles.minus}>
             -

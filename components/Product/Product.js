@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Product = (props) => {
   let href = "";
-  if (props.gender === "woman") {
+  if (props.gender === "women") {
     href = "/products/women/" + props.id;
   } else {
     href = "/products/men/" + props.id;
